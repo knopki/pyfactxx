@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v5
-      - uses: ilammy/msvc-dev-cmd@v1
+      - uses: ilammy/msvc-dev-cmd@460a772e4cf7358f9f2f23773240813e40e7a894 # 2024-03-31
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v3
         with:
