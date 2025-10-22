@@ -54,9 +54,12 @@ jobs:
     defaults:
       run:
         working-directory: ./FaCT++.Python
+    # environment:
+    #   name: pypi
+    #   url: https://pypi.org/p/pyfactxx
     environment:
-      name: pypi
-      url: https://pypi.org/p/pyfactxx
+      name: testpypi
+      url: https://test.pypi.org/p/knopki-pyfactxx
     permissions:
       id-token: write # IMPORTANT: this permission is mandatory for trusted publishing
     steps:
@@ -82,8 +85,4 @@ jobs:
         uses: pypa/gh-action-pypi-publish@v1.13.0
         with:
           packages-dir: FaCT++.Python/dist/
-          # # useful for testing:
-          # verbose: true
-          # repository-url: https://test.pypi.org/legacy/
-          # user: __token__
-          # password: ${{ secrets.PYPI_API_TOKEN }}
+          verbose: true
