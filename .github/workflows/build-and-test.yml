@@ -3,9 +3,9 @@ name: Build and test pyfactxx
 on:
   workflow_dispatch:
   push:
-    branches: [master, "wheels"]
+    branches: [$default-branch, "wheels"]
   pull_request:
-    branches: [master, "wheels"]
+    branches: [$default-branch, "wheels"]
 
 permissions:
   contents: read # access to check out code and install dependencies
